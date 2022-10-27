@@ -1,0 +1,113 @@
+.container {
+    position: absolute;
+    height: 718px;
+    left: 20px;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    flex: 1;
+}
+
+.header{
+    order: 1;
+    top: 44px;
+}
+
+.navigation{
+    left: 0px;
+    right: 0px;
+    top: 44px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    padding: 5px;
+}
+
+.logo{
+    width: 100px;
+    height: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    color: #6070FF;
+    background-color: rgb(246, 245, 252);
+    border-radius: 10%;
+    padding: 5px;
+}
+
+.btn{
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+.intro {
+    order: 2;
+    background-image: url(images/header-shapes\ mobile.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 24px;
+    width: 375px;
+    left: calc(50% - 375px/2);
+    left: 6.4%;
+    right: 6.4%;
+    top: 93.51%;
+    bottom: 5.6%;
+}
+
+.intro_greeting {
+    width: 327px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    color: #172B4D;
+    flex-wrap: wrap;
+    order: 1;
+    height: 70px;
+}
+
+.intro_text {
+    width: 327px;
+    height: 146px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #344563;
+    order: 2;
+}
+
+.connect{
+    height: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7F8CFF;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.socials{
+    display: flex;
+    width: 90px;
+    flex: 1;
+    justify-content:space-between;
+    order: 3;
+    flex-grow: 0;
+}
