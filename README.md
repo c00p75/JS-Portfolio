@@ -1,6 +1,6 @@
-# Set up a 'Hello Microverse' project
+# Portfolio: setup and mobile first
 
-> The goal of this project is to build a personal portfolio site that is simple, uses images and backgrounds to enhance the look of the website, and most importantly, thorough.
+> The goal of this project is to build a personal portfolio site using "mobile first" aproach that is simple, uses images and backgrounds to enhance the look of the website, and most importantly, thorough.
 
 
 ## Built With
