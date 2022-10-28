@@ -1,4 +1,4 @@
-body{
+body {
   background: #f7f7f9;
 }
 
@@ -23,7 +23,6 @@ a {
   width: 375px;
   background-color: white;
   border-bottom-left-radius: 8%;
-
 }
 
 .header {
@@ -47,7 +46,7 @@ a {
   display: flex;
   width: 100px;
   height: 40px;
-  padding: 10px 12px;  
+  padding: 10px 12px;
   left: 12px;
   top: calc(50% - 40px / 2);
   align-items: center;
@@ -89,7 +88,6 @@ a {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-
   padding: 114px 24px;
   gap: 12px;
   width: 375px;
@@ -128,7 +126,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
   gap: 16px;
   width: 117px;
   height: 24px;
@@ -138,7 +135,6 @@ a {
 .connect_text {
   display: flex;
   align-items: center;
-  padding: 0px;
   gap: 8px;
   width: 117px;
   height: 24px;
@@ -161,5 +157,5 @@ a {
   height: 20px;
   order: 4;
   flex: 5px;
-  list-style:none ;
+  list-style: none;
 }
