@@ -343,7 +343,7 @@ li {
   border-radius: 8px;
 }
 
-.tags p span {
+.tags span {
   width: 29px;
   height: 16px;
   font-family: 'Poppins', sans-serif !important;
@@ -419,7 +419,7 @@ li {
   justify-content: space-between;
 }
 
-.about_me h1 {
+.about_me_header {
   width: 327px;
   height: 101px;
   font-family: 'Poppins', sans-serif !important;
@@ -458,7 +458,7 @@ li {
   height: 24px;
 }
 
-.connect_text2 p {
+.connect_text2 h2 {
   font-family: 'Poppins', sans-serif !important;
   font-style: normal;
   font-weight: 500;
