@@ -1,15 +1,12 @@
-/* * { outline: 2px dotted red } */
-
 body {
   background: #f7f7f9;
-  width: 100vw;
 }
 
 a {
   text-decoration: none;
 }
 
-li {  
+li {
   list-style: none;
 }
 
@@ -23,29 +20,36 @@ li {
   display: flex;
   flex-direction: column;
   flex: 1;
-  position: relative;
-  width: inherit;
-  padding: auto;
+  position: absolute;
+  height: 718px;
+  width: 375px;
 }
 
 .header {
+  width: 375px;
+  height: 92px;
   order: 1;
   background-color: white;
 }
 
 .navigation {
+  top: 44px;
   display: flex;
-  height: max-content;
+  flex-direction: column;
+  height: 60px;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
+  align-content: space-between;
+  justify-content: center;
+  padding: 5px;
 }
 
 .logo {
   display: flex;
-  width: 30%;
-  padding: 2% 2%;
+  width: 100px;
+  height: 40px;
+  padding: 10px 12px;
+  left: 12px;
+  top: calc(50% - 40px / 2);
   align-items: center;
 }
 
@@ -54,8 +58,8 @@ li {
   font-family: 'Poppins', sans-serif !important;
   font-style: normal;
   font-weight: 700;
-  font-size: large;
-  line-height: 85%;
+  font-size: 18px;
+  line-height: 16px;
   color: #6070ff;
 }
 
@@ -65,30 +69,39 @@ li {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 2%;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  right: 24px;
+  top: calc(50% - 40px / 2);
   border-radius: 8px;
   border: 0;
+}
+
+.btn img {
+  width: 24px;
+  height: 24px;
 }
 
 .intro {
   order: 2;
   background-image: url(images/header-shapes\ mobile.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: inherit;
   padding: 114px 24px;
-  /* padding: 20.5% 4%;*/
-  gap: 2vh;
-  border-bottom-left-radius: 80px;
+  gap: 12px;
+  width: 375px;
+  height: 604px;
+  left: calc(50% - 375px / 2);
+  top: 92px;
+  border-bottom-left-radius: 8%;
   background-color: white;
 }
 
 .intro_greeting {
-  
-  height: 25vh;
+  width: 327px;
+  height: 150px;
   font-family: 'Poppins', sans-serif !important;
   font-style: normal;
   font-weight: 700;
@@ -101,7 +114,7 @@ li {
 }
 
 .intro_text {
-  width: 100%;
+  width: 327px;
   height: 146px;
   font-family: 'Poppins', sans-serif !important;
   font-style: normal;
@@ -157,6 +170,9 @@ li {
   justify-content: center;
   padding: 114px 24px;
   gap: 88px;
+  width: 375px;
+  height: 2788px;
+  top: 718px;
 }
 
 .work_item {
@@ -167,6 +183,8 @@ li {
   align-items: center;
   padding: 16px;
   gap: 12px;
+  width: 327px;
+  height: 552px;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
 }
@@ -351,6 +369,7 @@ li {
   gap: 10px;
   width: 126px;
   height: 48px;
+  top: calc(50% - 48px / 2);
   border: 1px solid #6070ff;
   border-radius: 8px;
 }
@@ -381,9 +400,12 @@ li {
   align-items: flex-start;
   padding: 114px 24px;
   gap: 24px;
+  width: 375px;
+  height: 1125.15px;
+  left: calc(50% - 375px / 2);
   top: 3506px;
   background-color: white;
-  border-top-right-radius: 80px;
+  border-top-right-radius: 10%;
   flex: 1;
 }
 
@@ -392,11 +414,13 @@ li {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+  width: 327px;
   height: 409px;
   justify-content: space-between;
 }
 
 .about_me_header {
+  width: 327px;
   height: 101px;
   font-family: 'Poppins', sans-serif !important;
   font-style: normal;
@@ -494,11 +518,16 @@ li {
   padding: 8px;
   width: 327px;
   height: 72px;
+  right: 26px;
+  top: calc(50% - 40px / 2);
   border-radius: 8px;
 }
 
 .language_header h2 {
   height: 24px;
+  left: 12px;
+  right: 78px;
+  top: calc(50% - 24px / 2);
   font-family: 'Poppins', sans-serif !important;
   font-style: normal;
   font-weight: 500;
@@ -515,6 +544,8 @@ li {
   padding: 8px;
   width: 40px;
   height: 40px;
+  right: 26px;
+  top: calc(50% - 40px / 2);
   border-radius: 8px;
   border: 0;
 }
@@ -549,6 +580,9 @@ li {
 
 .language_name {
   height: 24px;
+  left: 76px;
+  right: 12px;
+  top: calc(50% - 24px / 2 - 0.36px);
   font-family: 'Poppins', sans-serif !important;
   font-style: normal;
   font-weight: 500;
@@ -615,9 +649,6 @@ li {
   text-align: center;
   color: #ebebff;
 }
-
-
-/***********ADD CODE BELOW************/
 
 .contact_section form {
   width: 100%;
