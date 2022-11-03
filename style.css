@@ -95,7 +95,7 @@ li {
   height: 604px;
   left: calc(50% - 375px / 2);
   top: 92px;
-  border-bottom-left-radius: 8%;
+  border-bottom-left-radius: 80px;
   background-color: white;
 }
 
@@ -405,7 +405,7 @@ li {
   left: calc(50% - 375px / 2);
   top: 3506px;
   background-color: white;
-  border-top-right-radius: 10%;
+  border-top-right-radius: 80px;
   flex: 1;
 }
 
