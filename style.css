@@ -68,6 +68,15 @@ li {
   padding: 2%;
   border-radius: 8px;
   border: 0;
+  order: 1;
+}
+
+#desktop_nav {
+  height: 1px;
+  pointer-events: none;
+  opacity: 0;
+  order: 0;
+  width: 0;
 }
 
 .intro {
@@ -583,9 +592,20 @@ li {
   margin-top: 32px;
 }
 
-@media only screen and (min-width: 668px) {
+@media only screen and (min-width: 768px) {
+  .project_link {
+    justify-content: center;
+    width: 25%;
+    padding: 0.5% 0;
+  }
+
+  .project_link p a {
+    font-size: 1.2vw;
+    letter-spacing: 0.03em;
+  }
+
   .logo {
-    width: 14%;
+    width: 10%;
     padding: 0;
   }
 
@@ -594,6 +614,36 @@ li {
     position: fixed;
     width: 100vw;
     background-color: white;
+  }
+
+  #desktop_nav {
+    opacity: 1;
+    order: 1;
+    pointer-events: all;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    width: 259px;
+    align-items: center;
+  }
+
+  #desktop_nav a {
+    font-family: 'Poppins', sans-serif !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #344563;
+  }
+
+  .btn {
+    pointer-events: none;
+    opacity: 0;
+    order: 0;
+    width: 0;
   }
 
   .intro {
@@ -651,8 +701,8 @@ li {
   }
 
   .work_item_header {
-    font-size: 2.1vw;
     padding-top: 4%;
+    font-size: 40px;
   }
 
   .work_history {
@@ -713,22 +763,13 @@ li {
     font-size: 1vw;
   }
 
-  .project_link {
-    justify-content: center;
-    width: 25%;
-    padding: 0.5% 0;
-    background: #4053fc;
-    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
-  }
-
-  .project_link p a {
-    font-size: 1.2vw;
-    letter-spacing: 0.03em;
-    color: white;
-  }
-
   .flex_reversed {
     flex-direction: row-reverse !important;
+  }
+
+  .flex_reversed .work_item_header {
+    width: 250%;
+    padding-right: 55px;
   }
 
   .about_myself {
@@ -783,7 +824,7 @@ li {
     border-radius: 4px;
   }
 
-  .resume_link p a {
+  #resume {
     font-weight: 700;
     font-size: 1vw;
     line-height: 1.3em;
@@ -904,7 +945,33 @@ li {
     padding: 2vh 0;
   }
 
+  #form_submit:hover {
+    background: #6070ff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+    color: white;
+    border: 2px solid white;
+  }
+
+  #form_submit:active {
+    background: #2230d2;
+  }
+
   .home_indicator {
     opacity: 0;
+  }
+
+  .btn_effect:hover {
+    background: #6070ff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+  }
+
+  .btn_effect:hover * {
+    color: white;
+  }
+
+  .btn_effect:active {
+    background: #2230d2;
   }
 }
