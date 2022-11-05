@@ -15,10 +15,14 @@
 				<div class="logo"> 
 					<a href="#">George M'sapenda</a>
 				</div>
-					<button class="btn">
-						<img src="/images/Icon - Menu.png" alt="menu bar icon">
-					</button>                    
-				</div>
+				<button class="btn">
+					<img src="images/Menu_icon.png" alt="menu bar icon">
+				</button> 
+				<ul id="desktop_nav">
+					<li><a href="#">Portifolio</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>					    					         			
 			</nav>
 		</header>
 
@@ -51,7 +55,7 @@
 
 			<section class="Works">
 				<div class="work_item">
-					<img src="images/Snapshoot Portfolio.png" alt="snapshot portifolio image">
+					<img src="images/Snapshoot Portfolio.png" alt="snapshot portifolio image" class="portifolio_img">
 					<div class="work_details">
 						<div class="project">
 							<h2 class="work_item_header">Tonic</h2>
@@ -59,7 +63,7 @@
 								<p class="client">
 									<span class="client_name">Canopy</span>
 								</p>
-								<p class="counter">
+								<p>
 									<img src="images/Counter.png" alt="counter icon">                            
 								</p>
 								<p class="role">
@@ -68,7 +72,7 @@
 								<p class="counter">
 									<img src="images/Counter.png" alt="counter icon">                            
 								</p>
-								<p class="year">
+								<p>
 									<span class="date">2015</span>
 								</p>
 							</div>   
@@ -85,7 +89,7 @@
 								<span>javascript</span>
 							</li>
 						</ul>
-						<div class="project_link">
+						<div class="project_link btn_effect">
 							<p>
 								<a href="#">See Project</a>
 							</p>
@@ -93,8 +97,8 @@
 					</div> 
 				</div>
 
-				<div class="work_item">
-					<img src="images/Snapshoot Portfolio (1).png" alt="snapshot portifolio image">
+				<div class="work_item flex_reversed">
+					<img src="images/Snapshoot Portfolio (1).png" alt="snapshot portifolio image" class="portifolio_img">
 					<div class="work_details">
 						<div class="project">
 							<h2 class="work_item_header">Multi-Post Stories</h2>
@@ -128,7 +132,7 @@
 								<span>javascript</span>
 							</li>
 						</ul>
-						<div class="project_link">
+						<div class="project_link btn_effect">
 							<p>
 								<a href="#">See Project</a>
 							</p>
@@ -137,7 +141,7 @@
 				</div>
 
 				<div class="work_item">
-					<img src="images/Snapshoot Portfolio (2).png" alt="snapshot portifolio image">
+					<img src="images/Snapshoot Portfolio (2).png" alt="snapshot portifolio image" class="portifolio_img">
 					<div class="work_details">
 						<div class="project">
 							<h2 class="work_item_header">Tonic</h2>
@@ -171,7 +175,7 @@
 								<span>javascript</span>
 							</li>
 						</ul>
-						<div class="project_link">
+						<div class="project_link btn_effect">
 							<p>
 								<a href="#">See Project</a>
 							</p>
@@ -179,8 +183,8 @@
 					</div> 
 				</div>
 
-				<div class="work_item">
-					<img src="images/Snapshoot Portfolio (3).png" alt="snapshot portifolio image">
+				<div class="work_item flex_reversed">
+					<img src="images/Snapshoot Portfolio (3).png" alt="snapshot portifolio image" class="portifolio_img">
 					<div class="work_details">
 						<div class="project">
 							<h2 class="work_item_header">Multi-Post Stories</h2>
@@ -214,7 +218,7 @@
 								<span>javascript</span>
 							</li>
 						</ul>
-						<div class="project_link">
+						<div class="project_link btn_effect">
 							<p>
 								<a href="#">See Project</a>
 							</p>
@@ -250,9 +254,9 @@
 									</a>
 							</li>                                
 						</ul>		
-						<div class="resume_link">
+						<div class="resume_link btn_effect">
 							<p>
-								<a href="#">Get my resume</a>
+								<a href="#" id="resume">Get my resume</a>
 							</p>
 						</div>		
 					</div>					
@@ -286,8 +290,8 @@
 							</ul>							
 						</li>
 			
-						<li class="skill_set2">
-							<div class="language_header">
+						<li>
+							<div class="language_header language_header_minimized" id="frameworks">
 								<h2>Frameworks</h2>
 								<button class="btn2">
 									<img src="images/inactive_dropdown.png" alt="dropdown icon">
@@ -295,39 +299,41 @@
 							</div>
 						</li>
 						
-						<img src="images/Separator Bottom.png" alt="seperator bottom icon">
+						<img src="images/Separator Bottom.png" alt="seperator bottom icon" class="sep">
 						
-						<li class="skill_set3">
-							<div class="language_header">
+						<li>
+							<div class="language_header language_header_minimized">
 								<h2>Skills</h2>
 								<button class="btn2">
 									<img  src="images/inactive_dropdown.png" alt="">
 								</button>
 							</div>							
 						</l1>
-						<img src="images/Separator Bottom.png" alt="seperator bottom icon">
+						<img src="images/Separator Bottom.png" alt="seperator bottom icon" class="sep">
 					</ul>
 				</div>
 			</section>
 			
 			<section class="contact_section">
 				<div class="contact_section_container">
-					<h2>Contact me</h2>		
+					<h2>Contact me</h2>
+		
 					<div class="contact_text">
 						<p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
 					</div>
-					<form action="https://formspree.io/f/mbjbpwzk" method="POST" autocomplete="on">						
-							<input type="text" id="name" name="name" placeholder="Name" maxlength="30" required><br>						
-							<input type="email" id="email" name="email" placeholder="Email" required><br> 
-							<textarea name="msg" id="msg" rows="6"  placeholder="Write your message here" maxlength="500" required></textarea><br>
+					
+					<form autocomplete="on">						
+							<input type="text" id="name" name="name" placeholder="Name"><br>						
+							<input type="email" id="email" name="email" placeholder="Email"><br> 
+							<textarea name="msg" id="msg" rows="6"  placeholder="Write your message here"></textarea><br>
 							<input type="submit" id="form_submit" value="Get in touch">				
 					</form>
+					
 					<div class="home_indicator">
 						<img src="images/Home indicator.png" alt="home indicator icon">
 					</div>
 				</div>
 			</section>
-			
 	</main>
 </body>
 </html>
