@@ -974,4 +974,8 @@ li {
   .btn_effect:active {
     background: #2230d2;
   }
+
+  .hover_effect:hover {
+    transform: scale(1.1);
+  }
 }
