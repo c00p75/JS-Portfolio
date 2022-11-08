@@ -626,6 +626,7 @@ li {
     gap: 8px;
     width: 259px;
     align-items: center;
+    padding: 20px 0;
   }
 
   #desktop_nav a {
@@ -640,10 +641,7 @@ li {
   }
 
   .btn {
-    pointer-events: none;
-    opacity: 0;
-    order: 0;
-    width: 0;
+    display: none;
   }
 
   .intro {
@@ -943,6 +941,7 @@ li {
     font-size: 1.4vw;
     border-radius: 8px;
     padding: 2vh 0;
+    border: 2px solid;
   }
 
   #form_submit:hover {
