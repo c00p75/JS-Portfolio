@@ -69,6 +69,8 @@ li {
   border-radius: 8px;
   border: 0;
   order: 1;
+  width: 18px;
+  margin-right: 2em;
 }
 
 #desktop_nav {
@@ -589,9 +591,9 @@ li {
 
 @media only screen and (min-width: 768px) {
   .project_link p a {
-    height: auto;
-    font-size: 1.5em;
-    letter-spacing: 0.03em;
+    width: 100px;
+    height: 5px;
+    font-size: 17px;
   }
 
   .logo {
@@ -611,7 +613,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 8px;
+    gap: 40px;
     width: 259px;
     align-items: center;
     padding: 20px 0;
