@@ -305,6 +305,19 @@ li {
   border-radius: 8px;
 }
 
+.resume_link a {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.0625em;
+  line-height: 1.3em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #396df2;
+}
+
 .project_link p a {
   height: 5.5vh;
   font-family: 'Poppins', sans-serif;
@@ -390,19 +403,6 @@ li {
   border: 1px solid #6070ff;
   border-radius: 8px;
   order: 4;
-}
-
-.resume_link a {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.0625em;
-  line-height: 1.3em;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #396df2;
 }
 
 .skills {
