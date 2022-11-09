@@ -546,6 +546,10 @@ li {
   border: 0;
 }
 
+.contact_section form label {
+  display: none;
+}
+
 #name,
 #email {
   font-family: 'Poppins', sans-serif;
