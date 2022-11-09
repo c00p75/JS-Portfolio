@@ -51,10 +51,10 @@ li {
 
 .logo a {
   align-self: center;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: large;
+  font-size: 1.13em;
   line-height: 85%;
   color: #6070ff;
 }
@@ -72,11 +72,7 @@ li {
 }
 
 #desktop_nav {
-  height: 1px;
-  pointer-events: none;
-  opacity: 0;
-  order: 0;
-  width: 0;
+  display: none;
 }
 
 .intro {
@@ -95,12 +91,11 @@ li {
 }
 
 .intro_greeting {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 250%;
-  font-size: 8vw;
-  width: 50vw;
+  font-size: 2.4em;
+  width: 100vw;
   line-height: 130%;
   display: flex;
   align-items: center;
@@ -111,10 +106,10 @@ li {
 
 .intro_text {
   width: 100%;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 4.05vw;
+  font-size: 1em;
   color: #344563;
   order: 2;
 }
@@ -127,7 +122,7 @@ li {
 }
 
 .connect_text {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   color: #7f8cff;
@@ -186,11 +181,10 @@ li {
 }
 
 .work_item_header {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
-  font-size: 8.1vw;
+  font-size: 2em;
   color: #172b4d;
   width: 100%;
   padding-top: 4%;
@@ -214,11 +208,11 @@ li {
 }
 
 .client_name {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   width: 100%;
-  font-size: 3.3vw;
+  font-size: 0.8125em;
   color: #344563;
 }
 
@@ -231,20 +225,20 @@ li {
 }
 
 .role_name {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 3.3vw;
+  font-size: 0.8125em;
   width: 99%;
   line-height: 1.3em;
   color: #7a869a;
 }
 
 .date {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 3.3vw;
+  font-size: 0.8125em;
   width: 100%;
   color: #7a869a;
 }
@@ -252,10 +246,10 @@ li {
 .work_summary {
   width: 100%;
   padding-bottom: 1vh;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 3.9vw;
+  font-size: 0.9375em;
   line-height: 1.6em;
   color: #344563;
 }
@@ -293,10 +287,10 @@ li {
 }
 
 .tags span {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 3vw;
+  font-size: 0.75em;
   line-height: 2vw;
   letter-spacing: 0.03em;
   color: #6070ff;
@@ -315,11 +309,11 @@ li {
 
 .project_link p a {
   height: 5.5vh;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: 1.3em;
-  font-size: 4.6vw;
+  font-size: 1.0625em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -353,10 +347,10 @@ li {
 }
 
 .about_me_header {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 10vw;
+  font-size: 2.5em;
   line-height: 1.35em;
   display: flex;
   align-items: center;
@@ -364,10 +358,10 @@ li {
 }
 
 .about_me p {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 4.05vw;
+  font-size: 1em;
   line-height: 1.4em;
   color: #344563;
 }
@@ -385,10 +379,10 @@ li {
 }
 
 .connect_text2 h2 {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 4vw;
+  font-size: 1em;
   color: #7f8cff;
 }
 
@@ -401,11 +395,10 @@ li {
 }
 
 .resume_link p a {
-  font-family: 'Poppins', sans-serif !important;
-  font-style: normal, sans-serif !important;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
   font-weight: 500;
-  font-size: 17px;
-  font-size: 4.4vw;
+  font-size: 1.0625em;
   line-height: 1.3em;
   display: flex;
   align-items: center;
@@ -441,10 +434,10 @@ li {
 }
 
 .language_header h2 {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 5vw;
+  font-size: 1.25em;
   width: 84vw;
   line-height: 1.3em;
 }
@@ -488,10 +481,10 @@ li {
 }
 
 .language_name {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 3.9vw;
+  font-size: 0.9375em;
   align-self: center;
   color: #253858;
   grid-column: 1 / 2;
@@ -520,10 +513,10 @@ li {
 }
 
 .contact_section h2 {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 10vw;
+  font-size: 2.5em;
   display: flex;
   align-self: center;
   text-align: center;
@@ -532,10 +525,10 @@ li {
 
 .contact_text p {
   padding: 3vw 5vw 0.001px 5vw;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 5vw;
+  font-size: 1.25em;
   line-height: 1.5em;
   text-align: center;
   color: #ebebff;
@@ -557,30 +550,30 @@ li {
 
 #name,
 #email {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 100%;
+  font-size: 1.0625em;
   display: flex;
   align-items: center;
   color: #172b4d;
 }
 
 #msg {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 3.3vw;
+  font-size: 0.9375em;
   line-height: 1.3em;
   color: #172b4d;
 }
 
 #form_submit {
   width: 140px;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 100%;
+  font-size: 1.0625em;
   line-height: 1.3em;
   display: flex;
   letter-spacing: 0.03em;
@@ -630,7 +623,7 @@ li {
   }
 
   #desktop_nav a {
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
