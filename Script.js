@@ -9,7 +9,7 @@ expandedNav.addEventListener('click', () => {
 });
 
 navLinks.addEventListener('click', (event) => {
-  if (event.target.className === 'hover_effect' && event.classList.contains('mobile-menu')) {
+  if (event.target.className === 'hover_effect' && navLinks.classList.contains('mobile-menu')) {
     expandedNav.classList.toggle('active');
     expandedNav.classList.toggle('active-menu-btn');
     navLinks.classList.toggle('hide');
