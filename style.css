@@ -69,6 +69,8 @@ li {
   border-radius: 8px;
   border: 0;
   order: 1;
+  width: 18px;
+  margin-right: 2em;
 }
 
 #desktop_nav {
@@ -95,7 +97,6 @@ li {
   font-style: normal;
   font-weight: 700;
   font-size: 2.4em;
-  width: 100vw;
   line-height: 130%;
   display: flex;
   align-items: center;
@@ -302,9 +303,21 @@ li {
   flex-direction: row;
   align-items: center;
   padding: 2vw;
-  width: 42%;
   border: 1px solid #6070ff;
   border-radius: 8px;
+}
+
+.resume_link a {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.0625em;
+  line-height: 1.3em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #396df2;
 }
 
 .project_link p a {
@@ -378,7 +391,7 @@ li {
   gap: 1vh;
 }
 
-.connect_text2 h2 {
+.connect_text2 h3 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -392,19 +405,6 @@ li {
   border: 1px solid #6070ff;
   border-radius: 8px;
   order: 4;
-}
-
-.resume_link p a {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.0625em;
-  line-height: 1.3em;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #396df2;
 }
 
 .skills {
@@ -433,7 +433,7 @@ li {
   width: 85vw;
 }
 
-.language_header h2 {
+.language_header h3 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -548,6 +548,10 @@ li {
   border: 0;
 }
 
+.contact_section form label {
+  display: none;
+}
+
 #name,
 #email {
   font-family: 'Poppins', sans-serif;
@@ -586,15 +590,10 @@ li {
 }
 
 @media only screen and (min-width: 768px) {
-  .project_link {
-    justify-content: center;
-    width: 25%;
-    padding: 0.5% 0;
-  }
-
   .project_link p a {
-    font-size: 1.2vw;
-    letter-spacing: 0.03em;
+    width: 100px;
+    height: 5px;
+    font-size: 17px;
   }
 
   .logo {
@@ -610,13 +609,11 @@ li {
   }
 
   #desktop_nav {
-    opacity: 1;
     order: 1;
-    pointer-events: all;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 8px;
+    gap: 40px;
     width: 259px;
     align-items: center;
     padding: 20px 0;
@@ -655,12 +652,12 @@ li {
 
   .intro_greeting {
     padding-top: 10%;
-    font-size: 300%;
+    font-size: 3em;
     padding-bottom: 0;
   }
 
   .intro_text {
-    font-size: 100%;
+    font-size: 1.25em;
     width: 56vw;
   }
 
@@ -694,6 +691,7 @@ li {
   .work_item_header {
     padding-top: 4%;
     font-size: 40px;
+    font-size: 2.5em;
   }
 
   .work_history {
@@ -708,7 +706,7 @@ li {
   }
 
   .client_name {
-    font-size: 1.3vw;
+    font-size: 1.125em;
     align-self: flex-end;
   }
 
@@ -719,19 +717,19 @@ li {
 
   .role_name {
     font-weight: 400;
-    font-size: 1.3vw;
+    font-size: 1.125em;
     width: 100%;
   }
 
   .date {
     font-weight: 400;
-    font-size: 1.3vw;
+    font-size: 1.125em;
     padding: 0% 30%;
     align-self: flex-end;
   }
 
   .work_summary {
-    font-size: 1.1vw;
+    font-size: 1em;
   }
 
   .tags {
@@ -748,10 +746,6 @@ li {
 
   .tags .js {
     padding: 0.5% 4.5%;
-  }
-
-  .tags span {
-    font-size: 1vw;
   }
 
   .flex_reversed {
@@ -780,7 +774,7 @@ li {
   }
 
   .about_me {
-    gap: 2.5vh;
+    gap: 3.5vh;
     justify-content: space-between;
   }
 
@@ -790,7 +784,8 @@ li {
   }
 
   .about_me p {
-    font-size: 1vw;
+    font-size: 1em;
+    width: 40vw;
   }
 
   .socials2 {
@@ -805,10 +800,6 @@ li {
     gap: 8vh;
   }
 
-  .connect_text2 h2 {
-    font-size: 1.2vw;
-  }
-
   .resume_link {
     align-items: center;
     padding: 0.5vw;
@@ -817,8 +808,11 @@ li {
 
   #resume {
     font-weight: 700;
-    font-size: 1vw;
     line-height: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em;
   }
 
   .language_header {
@@ -836,8 +830,7 @@ li {
     padding-top: 6.5vh;
   }
 
-  .language_header h2 {
-    font-size: 1.4vw;
+  .language_header h3 {
     line-height: 1.3em;
   }
 
@@ -859,8 +852,8 @@ li {
   }
 
   .language {
-    width: 7vw;
-    height: fit-content;
+    width: 11vw;
+    height: 120px;
     padding: 0;
     padding-bottom: 2vh;
     background: #f7f7f9;
@@ -878,10 +871,6 @@ li {
     width: 3vw;
   }
 
-  .language_name {
-    font-size: 1vw;
-  }
-
   .contact_section_container {
     background: #6070ff;
     padding: 12% 25%;
@@ -891,15 +880,6 @@ li {
     background-size: 97% 80%;
     background-position-y: 55%;
     background-image: url(images/contact\ form\ background\ shapes@2x.png);
-  }
-
-  .contact_section h2 {
-    font-size: 200%;
-    display: flex;
-  }
-
-  .contact_text p {
-    font-size: 1.4vw;
   }
 
   .contact_section form {
@@ -913,25 +893,10 @@ li {
     border: 0;
   }
 
-  #name,
-  #email {
-    font-size: 1.4vw;
-    display: flex;
-    align-items: center;
-    color: #172b4d;
-  }
-
-  #msg {
-    font-size: 1.4vw;
-    line-height: 1.3em;
-  }
-
   #form_submit {
     width: 40%;
-    display: flex;
     justify-content: center;
     align-self: center;
-    font-size: 1.4vw;
     border-radius: 8px;
     padding: 2vh 0;
     border: 2px solid;
