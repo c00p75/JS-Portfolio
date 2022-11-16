@@ -17,5 +17,3 @@ navLinks.addEventListener('click', function (event) {
     navLinks.classList.toggle('mobile-menu');
   }
 })
-
-console.log(navLinks.classList.contains('mobile-menu')); 
