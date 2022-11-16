@@ -15,45 +15,47 @@
 				<div class="logo"> 
 					<a href="#" class="hover_effect">George M'sapenda</a>
 				</div>
-				<button class="btn">
-					<img src="./images/Menu_icon.png" alt="menu">
+				<button class='menu-btn'>					
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>					
 				</button> 
-				<ul id="desktop_nav">
-					<li><a href="#" class="hover_effect">Portifolio</a></li>
-					<li><a href="#" class="hover_effect">About</a></li>
-					<li><a href="#" class="hover_effect">Contact</a></li>
+				<ul class="hide" id="desktop_nav">
+					<li><a href="#Works" class="hover_effect">Portifolio</a></li>
+					<li><a href="#about_myself" class="hover_effect">About</a></li>
+					<li><a href="#contact_section" class="hover_effect">Contact</a></li>
 				</ul>					    					         			
 			</nav>
 		</header>
 
-			<section class="intro">
-					<h1 class="intro_greeting">I'm George<br> Nice to see you!</h1>
-					<p class="intro_text">I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
-					<div class="connect">
-						<div class="connect_text">
-							<p>LET'S CONNECT<p>    
-						</div>
+			<section id="intro" >
+				<h1 class="intro_greeting">I'm George<br> Nice to see you!</h1>
+				<p class="intro_text">I’m a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
+				<div class="connect">
+					<div class="connect_text">
+						<p>LET'S CONNECT<p>    
 					</div>
-					<ul class="socials">
+				</div>
+				<ul class="socials">
+					<li>
+						<a href="https://twitter.com/GeorgeMsapenda" target="_blank">
+							<img src="images/Twitter icon.png" alt="Twitter" class="hover_effect">
+						</a>
+					</li>
+					<li>
+						<a href="https://linkedin.com/in/george-m-sapenda-593750201" target="_blank">
+							<img src="images/Linkedin icon.png" alt="Linkedn" class="hover_effect">
+						</a> 
+					</li>
 						<li>
-							<a href="https://twitter.com/GeorgeMsapenda" target="_blank">
-								<img src="images/Twitter icon.png" alt="Twitter" class="hover_effect">
+							<a href="https://github.com/c00p75" target="_blank">
+								<img src="images/Github icon.png" alt="Github" class="hover_effect">
 							</a>
-						</li>
-						<li>
-							<a href="https://linkedin.com/in/george-m-sapenda-593750201" target="_blank">
-								<img src="images/Linkedin icon.png" alt="Linkedn" class="hover_effect">
-							</a> 
-						</li>
-							<li>
-								<a href="https://github.com/c00p75" target="_blank">
-									<img src="images/Github icon.png" alt="Github" class="hover_effect">
-								</a>
-						</li>                                
-					</ul>
+					</li>                                
+				</ul>
 			</section>
 
-			<section class="Works">
+			<section id="Works">
 				<div class="work_item">
 					<img src="images/Snapshoot Portfolio.png" alt="project snapshot" class="portifolio_img">
 					<div class="work_details">
@@ -227,7 +229,8 @@
 				</div> 
 				</div>
 			</section>
-			<section class="about_myself">
+
+			<section id="about_myself">
 				<div class="about_me_container">
 					<div class="about_me">
 						<h2 class="about_me_header">About<br>Myself</h2>
@@ -314,7 +317,7 @@
 				</div>
 			</section>
 			
-			<section class="contact_section">
+			<section id="contact_section">
 				<div class="contact_section_container">
 					<h2>Contact me</h2>		
 					<div class="contact_text">
@@ -337,5 +340,6 @@
 				</div>
 			</section>
 	</main>
+	<script src="Script.js"></script>
 </body>
 </html>
