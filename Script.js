@@ -82,7 +82,7 @@ function addTechnologies(card) {
     if (document.querySelector('body').contains(document.querySelector('.popup'))) {
       document.querySelector('.popup .tags').appendChild(tag);      
     }
-    else{
+    else {
       document.querySelector(`#${card} .tags`).appendChild(tag);
     }    
   }    
@@ -125,7 +125,7 @@ function addProject (project) {
     </div>
   </div> 
   </div>
-  `
+  `;
   document.querySelector('#Works').appendChild(workItem);
   addTechnologies(project);
 }
@@ -144,10 +144,10 @@ const projectWindow = document.createElement('div');
 projectWindow.classList.add('hide');
 projectWindow.classList.add('popup');
 
-//Close window
+// Close window
 function closePopupWindow(){
   const closePopup = document.querySelector('.popupClose');
-  closePopup.addEventListener('click', ()=> {
+  closePopup.addEventListener('click', () => {
     projectWindow.classList.toggle('hide');
     overlay.classList.toggle('hide');
   })
@@ -180,8 +180,8 @@ function popupWindow(id) {
         <p>
           <span class="date">${workProperties[id].year}</span>
         </p>
-      </div>   
-    </div>       		
+      </div>
+    </div>
     <img src="${workProperties[id].featuredImage}" alt="project snapshot" class="portifolio_img">
     <p class="work_summary">${workProperties[id].description}</p>
     <ul class="tags">
@@ -190,29 +190,7 @@ function popupWindow(id) {
     <div class="popupLinks">
       <div class="project_link btn_effect">
         <p>
-          <a href="#">See Live</a>        
-          <img src="Images/External link icon.png" alt="">
+          <a href="#">See Live</a><img src="Images/External link icon.png" alt="">
         </p>
-      </div>
-      <div class="project_link btn_effect">
-        <p>
-          <a href="#">See Source</a>
-          <img src="Images/Github popup icon.png" alt="">
-        </p>
-      </div>
-    </div>
-  </div> 
-  `
-  addTechnologies(id)
-  closePopupWindow()
-}
-
-//Event listener to call popupWindow function
-workSection.addEventListener('click', (event)=> {
-  if (event.target.className === 'project_link btn_effect'){
-    const getProjectId = event.target.parentElement.parentElement.id;
-    popupWindow(getProjectId)  
-  }
-})
-
-
+      </div><div class="project_link btn_effect"><p><a href="#">See Source</a><img src="Images/Github popup icon.png" alt=""></p></div></div></div>`; addTechnologies(id); closePopupWindow(); }
+workSection.addEventListener('click', (event) => { if (event.target.className === 'project_link btn_effect') { const getProjectId = event.target.parentElement.parentElement.id; popupWindow(getProjectId); } });
