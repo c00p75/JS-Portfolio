@@ -79,7 +79,7 @@ const workProperties = {
 
 //  Function to addlist of technologies to portifolio project
 function addTechnologies(card) {
-  Object.keys(workProperties[card].technologies).forEach (i => {
+  Object.keys(workProperties[card].technologies).forEach ((i) => {
     const tag = document.createElement('li');
     tag.innerHTML = `<span>${workProperties[card].technologies[i]}</span>`;
     tag.classList.add('tag-item');
@@ -87,8 +87,7 @@ function addTechnologies(card) {
       document.querySelector('.popup .tags').appendChild(tag);
     } else {
       document.querySelector(`#${card} .tags`).appendChild(tag);
-    }}
-  )
+     }});
 }
 
 // Function to add portifolio project html to work section
