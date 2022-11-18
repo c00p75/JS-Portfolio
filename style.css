@@ -725,6 +725,10 @@ li {
   padding: 1em 0;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 @media only screen and (min-width: 768px) {
   .project_link p a {
     width: 100px;

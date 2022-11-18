@@ -1,20 +1,23 @@
 //Add click event listener to menu btn to toggle menu
 const expandedNav = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('#desktop_nav');
+const body = document.querySelector('body');
 
-expandedNav.addEventListener('click', () => {
+function mobileMenuClasses() {
   expandedNav.classList.toggle('active');
   expandedNav.classList.toggle('active-menu-btn');
   navLinks.classList.toggle('hide');
   navLinks.classList.toggle('mobile-menu');
+  body.classList.toggle('noscroll');
+} 
+
+expandedNav.addEventListener('click', () => {
+  mobileMenuClasses()
 });
 
 navLinks.addEventListener('click', (event) => {
   if (event.target.className === 'hover_effect' && navLinks.classList.contains('mobile-menu')) {
-    expandedNav.classList.toggle('active');
-    expandedNav.classList.toggle('active-menu-btn');
-    navLinks.classList.toggle('hide');
-    navLinks.classList.toggle('mobile-menu');
+    mobileMenuClasses()
   }
 });
 
@@ -79,7 +82,7 @@ function addTechnologies(card) {
     let tag = document.createElement("li");
     tag.innerHTML = `<span>${workProperties[card].technologies[i]}</span>`;
     tag.classList.add('tag-item');
-    if (document.querySelector('body').contains(document.querySelector('.popup'))) {
+    if (body.contains(document.querySelector('.popup'))) {
       document.querySelector('.popup .tags').appendChild(tag);      
     }
     else {
@@ -135,7 +138,7 @@ for (var i in workProperties) {
   addProject(i);
 }
 
-// Popup window
+// Popup window variables
 const workSection = document.querySelector('#Works');
 const overlay = document.createElement('section');
 overlay.classList.add('popupOverlay');
@@ -144,21 +147,25 @@ const projectWindow = document.createElement('div');
 projectWindow.classList.add('hide');
 projectWindow.classList.add('popup');
 
-// Close window
+function popupWindowClasses() {
+  projectWindow.classList.toggle('hide');
+  overlay.classList.toggle('hide');
+  body.classList.toggle('noscroll');
+}
+
+// Close window function
 function closePopupWindow(){
   const closePopup = document.querySelector('.popupClose');
   closePopup.addEventListener('click', () => {
-    projectWindow.classList.toggle('hide');
-    overlay.classList.toggle('hide');
+    popupWindowClasses();
   })
 }
 
 //Add popup window html
 function popupWindow(id) {
-  projectWindow.classList.toggle('hide');
-  overlay.classList.toggle('hide');
-  document.querySelector('body').appendChild(overlay);
-  document.querySelector('body').appendChild(projectWindow);
+  popupWindowClasses();
+  body.appendChild(overlay);
+  body.appendChild(projectWindow);
   projectWindow.innerHTML = `  
   <div class="work_details">
     <div class="project">
@@ -192,5 +199,23 @@ function popupWindow(id) {
         <p>
           <a href="#">See Live</a><img src="Images/External link icon.png" alt="">
         </p>
-      </div><div class="project_link btn_effect"><p><a href="#">See Source</a><img src="Images/Github popup icon.png" alt=""></p></div></div></div>`; addTechnologies(id); closePopupWindow(); }
-workSection.addEventListener('click', (event) => { if (event.target.className === 'project_link btn_effect') { const getProjectId = event.target.parentElement.parentElement.id; popupWindow(getProjectId); } });
+      </div>
+      <div class="project_link btn_effect">
+        <p>
+          <a href="#">See Source</a>
+          <img src="Images/Github popup icon.png" alt="">
+        </p>
+      </div>
+    </div>
+  </div>
+  `; 
+  addTechnologies(id); 
+  closePopupWindow();
+}
+
+workSection.addEventListener('click', (event) => { 
+  if (event.target.className === 'project_link btn_effect') { 
+    const getProjectId = event.target.parentElement.parentElement.id; 
+    popupWindow(getProjectId); 
+  } 
+});
