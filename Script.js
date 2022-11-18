@@ -216,3 +216,35 @@ workSection.addEventListener('click', (event) => {
     popupWindow(getProjectId);
   }
 });
+
+//  Form Validation
+const form = document.querySelector('#contact_section form')
+const email = form.querySelector('#email');
+const error = form.querySelector('.error');
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+function setError(element, message) {
+  error.innerText = message;
+  element.classList.add('error-input');
+  error.classList.remove('hide');
+}
+
+function setSuccess(element) {
+  email.innerText = '';
+  element.classList.remove('error-input');
+  error.classList.add('hide');
+}
+
+function validateEmail() {
+  const emailValue = email.value.trim();
+  if (!emailRegex.test(emailValue)) {
+    setError(email, 'Invalid email address');
+  } else {
+    setSuccess(email);
+  }
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  validateEmail();
+});
