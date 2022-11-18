@@ -223,9 +223,7 @@ const email = form.querySelector('#email');
 const error = form.querySelector('.error');
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const submitButton = form.querySelector('#form_submit');
-const senderName = form.querySelector('#name');
-const senderMessage = form.querySelector('#msg')
-
+const senderMessage = form.querySelector('#msg');
 
 function setError(element, message) {
   error.innerText = message;
