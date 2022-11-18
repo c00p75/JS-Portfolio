@@ -840,7 +840,7 @@ li {
   }
 
   .work_history {
-    width: 100%;
+    width: min-content;
     align-content: space-around;
     align-items: center;
   }
