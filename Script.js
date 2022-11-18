@@ -189,18 +189,18 @@ function popupWindow(id) {
     <p class="work_summary">${workProperties[id].description}</p>
     <ul class="tags">
     </ul>
-    <img src="Images/Separator Bottom.png" class='popupSeperator' alt="">
+    <img src="images/Separator Bottom.png" class='popupSeperator' alt="">
     <div class="popupLinks">
       <div class="project_link btn_effect">
         <p>
           <a href="#">See Live</a>
-          <img src="Images/External link icon.png" alt="">
+          <img src="images/External link icon.png" alt="">
         </p>
       </div>
       <div class="project_link btn_effect">
         <p>
           <a href="#">See Source</a>
-          <img src="Images/Github popup icon.png" alt="">
+          <img src="images/Github popup icon.png" alt="">
         </p>
       </div>
     </div>
