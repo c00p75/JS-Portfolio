@@ -234,10 +234,7 @@ function setError(element, message) {
 }
 
 function setSuccess(element) {
-  senderName.disabled = true;
-  email.disabled = true;
   senderMessage.classList.add('sent');
-  senderMessage.disabled = true;
   element.classList.remove('error-input');
   error.classList.add('hide');
   submitButton.value = 'Sent';
