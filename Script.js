@@ -1,7 +1,8 @@
-//Add click event listener to menu btn to toggle menu
+//  Add click event listener to menu btn to toggle menu
 const expandedNav = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('#desktop_nav');
 const body = document.querySelector('body');
+const workSection = document.querySelector('#Works');
 
 function mobileMenuClasses() {
   expandedNav.classList.toggle('active');
@@ -9,26 +10,26 @@ function mobileMenuClasses() {
   navLinks.classList.toggle('hide');
   navLinks.classList.toggle('mobile-menu');
   body.classList.toggle('noscroll');
-} 
+}
 
 expandedNav.addEventListener('click', () => {
-  mobileMenuClasses()
+  mobileMenuClasses();
 });
 
 navLinks.addEventListener('click', (event) => {
   if (event.target.className === 'hover_effect' && navLinks.classList.contains('mobile-menu')) {
-    mobileMenuClasses()
+    mobileMenuClasses();
   }
 });
 
-//Variable to store project objects and properties
+//  Variable to store project objects and properties
 const workProperties = {
   project1: {
     featuredImage: 'images/Snapshoot Portfolio.png',
     name: 'Tonic',
     client: 'CANOPY',
     role: 'Back End Dev',
-    year: '2015',    
+    year: '2015',
     summary: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
     technologies: ['html', 'css', 'javascript'],
@@ -41,7 +42,7 @@ const workProperties = {
     name: 'Multi-Post Stories',
     client: 'CANOPY',
     role: 'Back End Dev',
-    year: '2015',    
+    year: '2015',
     summary: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
     technologies: ['html', 'css', 'javascript'],
@@ -54,7 +55,7 @@ const workProperties = {
     name: 'Tonic',
     client: 'CANOPY',
     role: 'Back End Dev',
-    year: '2015',    
+    year: '2015',
     summary: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
     technologies: ['html', 'css', 'javascript'],
@@ -67,36 +68,31 @@ const workProperties = {
     name: 'Multi-Post Stories',
     client: 'CANOPY',
     role: 'Back End Dev',
-    year: '2015',    
+    year: '2015',
     summary: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
     technologies: ['html', 'css', 'javascript'],
     liveVersionLink: 'Link to live',
     sourceLink: 'link to source',
-  }
-}
-
-//Function to addlist of technologies to portifolio project
-function addTechnologies(card) {
-  for(let i = 0; i < workProperties[card].technologies.length; i++) {
-    let tag = document.createElement("li");
-    tag.innerHTML = `<span>${workProperties[card].technologies[i]}</span>`;
-    tag.classList.add('tag-item');
-    if (body.contains(document.querySelector('.popup'))) {
-      document.querySelector('.popup .tags').appendChild(tag);      
-    }
-    else {
-      document.querySelector(`#${card} .tags`).appendChild(tag);
-    }    
-  }    
-  return ;
+  },
 };
 
+//  Function to addlist of technologies to portifolio project
+function addTechnologies(card) {
+  for (let i in workProperties[card].technologies) {
+    const tag = document.createElement('li');
+    tag.innerHTML = `<span>${workProperties[card].technologies[i]}</span>`;
+    tag.classList.add('tag-item');
+    if (body.contains(document.querySelector('.popup'))) {document.querySelector('.popup .tags').appendChild(tag);}
+    else {document.querySelector(`#${card} .tags`).appendChild(tag);}
+  };
+}
+
 // Function to add portifolio project html to work section
-function addProject (project) {
-  let workItem = document.createElement("div");
+function addProject (project){
+  const workItem = document.createElement('div');
   workItem.setAttribute('id', project);
-  workItem.classList.add("work_item");
+  workItem.classList.add('work_item');
   workItem.innerHTML = `
   <img src="${workProperties[project].featuredImage}" alt="project snapshot" class="portifolio_img">
   <div class="work_details">
@@ -118,8 +114,8 @@ function addProject (project) {
         <p>
           <span class="date">${workProperties[project].year}</span>
         </p>
-      </div>   
-    </div>       		
+      </div>
+    </div>
     <p class="work_summary">${workProperties[project].summary}</p>
     <ul class="tags">    
     </ul>
@@ -129,17 +125,18 @@ function addProject (project) {
   </div> 
   </div>
   `;
-  document.querySelector('#Works').appendChild(workItem);
+  workSection.appendChild(workItem);
   addTechnologies(project);
 }
 
-// Iterate through work properties and add elements and project property values to the work section
-for (var i in workProperties) {
-  addProject(i);
+//  Iterate through work properties and add elements and project property values to the work section
+if (body.contains(workSection)) {
+  for (let i in workProperties) {
+    addProject(i);
+  }  
 }
 
-// Popup window variables
-const workSection = document.querySelector('#Works');
+//  Popup window variables
 const overlay = document.createElement('section');
 overlay.classList.add('popupOverlay');
 overlay.classList.add('hide');
@@ -153,15 +150,15 @@ function popupWindowClasses() {
   body.classList.toggle('noscroll');
 }
 
-// Close window function
-function closePopupWindow(){
+//  Close window function
+function closePopupWindow() {
   const closePopup = document.querySelector('.popupClose');
   closePopup.addEventListener('click', () => {
     popupWindowClasses();
-  })
+  });
 }
 
-//Add popup window html
+//  Add popup window html
 function popupWindow(id) {
   popupWindowClasses();
   body.appendChild(overlay);
@@ -197,7 +194,8 @@ function popupWindow(id) {
     <div class="popupLinks">
       <div class="project_link btn_effect">
         <p>
-          <a href="#">See Live</a><img src="Images/External link icon.png" alt="">
+          <a href="#">See Live</a>
+          <img src="Images/External link icon.png" alt="">
         </p>
       </div>
       <div class="project_link btn_effect">
@@ -208,14 +206,14 @@ function popupWindow(id) {
       </div>
     </div>
   </div>
-  `; 
-  addTechnologies(id); 
+  `;
+  addTechnologies(id);
   closePopupWindow();
 }
 
-workSection.addEventListener('click', (event) => { 
-  if (event.target.className === 'project_link btn_effect') { 
-    const getProjectId = event.target.parentElement.parentElement.id; 
-    popupWindow(getProjectId); 
-  } 
+workSection.addEventListener('click', (event) => {
+  if (event.target.className === 'project_link btn_effect') {
+    const getProjectId = event.target.parentElement.parentElement.id;
+    popupWindow(getProjectId);
+  }
 });

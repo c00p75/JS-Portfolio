@@ -708,7 +708,7 @@ li {
 }
 
 .popupLinks .project_link img {
-  width: 10%;
+  width: 12%;
   height: 25%;
 }
 
@@ -1103,6 +1103,8 @@ li {
     width: 100%;
     display: flex;
     flex-direction: row;
+    gap: 10%;
+    justify-content: flex-start;
   }
 
   .popupLinks a {
@@ -1110,8 +1112,13 @@ li {
   }
 
   .popupLinks .project_link {
-    width: 8vw;
+    width: 45%;
     padding: 3% 2%;
+  }
+
+  .popupLinks .project_link img {
+    width: 15%;
+    height: 20%;
   }
 
   .popup .work_details {
