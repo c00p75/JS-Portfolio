@@ -79,17 +79,20 @@ const workProperties = {
 
 //  Function to addlist of technologies to portifolio project
 function addTechnologies(card) {
-  for (let i in workProperties[card].technologies) {
+  Object.keys(workProperties[card].technologies).forEach (i => {
     const tag = document.createElement('li');
     tag.innerHTML = `<span>${workProperties[card].technologies[i]}</span>`;
     tag.classList.add('tag-item');
-    if (body.contains(document.querySelector('.popup'))) {document.querySelector('.popup .tags').appendChild(tag);}
-    else {document.querySelector(`#${card} .tags`).appendChild(tag);}
-  };
+    if (body.contains(document.querySelector('.popup'))) {
+      document.querySelector('.popup .tags').appendChild(tag);
+    } else {
+      document.querySelector(`#${card} .tags`).appendChild(tag);
+    }}
+  )
 }
 
 // Function to add portifolio project html to work section
-function addProject (project){
+function addProject(project) {
   const workItem = document.createElement('div');
   workItem.setAttribute('id', project);
   workItem.classList.add('work_item');
@@ -130,11 +133,7 @@ function addProject (project){
 }
 
 //  Iterate through work properties and add elements and project property values to the work section
-if (body.contains(workSection)) {
-  for (let i in workProperties) {
-    addProject(i);
-  }  
-}
+Object.keys(workProperties).forEach((property) => addProject(property));
 
 //  Popup window variables
 const overlay = document.createElement('section');
