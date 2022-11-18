@@ -218,10 +218,10 @@ workSection.addEventListener('click', (event) => {
 });
 
 //  Form Validation
-const form = document.querySelector('#contact_section form')
+const form = document.querySelector('#contact_section form');
 const email = form.querySelector('#email');
 const error = form.querySelector('.error');
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 function setError(element, message) {
   error.innerText = message;
