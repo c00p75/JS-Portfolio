@@ -87,7 +87,8 @@ function addTechnologies(card) {
       document.querySelector('.popup .tags').appendChild(tag);
     } else {
       document.querySelector(`#${card} .tags`).appendChild(tag);
-    }});
+    }
+  });
 }
 
 // Function to add portifolio project html to work section
