@@ -760,6 +760,21 @@ form > * {
   font-weight: 900;
 }
 
+.success {
+  color: green !important;
+  background-color: white !important;
+}
+
+.success:hover {
+  background-color: white !important;
+  cursor: auto !important;
+}
+
+.sent {
+  background-color: rgb(52, 69, 99, 0.5) !important;
+  color: rgb(180, 178, 178) !important;
+}
+
 @media only screen and (min-width: 768px) {
   .project_link p a {
     width: 100px;
@@ -1057,12 +1072,12 @@ form > * {
   }
 
   #form_submit {
-    width: 100%;
+    width: 40% !important;
     justify-content: center;
     align-self: center;
-    border-radius: 8px;
-    padding: 2vh 0;
-    border: 2px solid;
+    border-radius: 8px !important;
+    padding: 2vh 0 !important;
+    border: 2px solid !important;
   }
 
   #form_submit:hover {
