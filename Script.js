@@ -250,6 +250,6 @@ function validateEmail() {
   }
 }
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', () => {
   validateEmail();
 });
