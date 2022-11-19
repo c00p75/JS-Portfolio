@@ -221,27 +221,28 @@ workSection.addEventListener('click', (event) => {
 const form = document.querySelector('#contact_section form');
 const email = form.querySelector('#email');
 const error = form.querySelector('.error');
-const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const submitButton = form.querySelector('#form_submit');
 const senderMessage = form.querySelector('#msg');
 
-function setError(element, message) {
-  error.innerText = message;
-  element.classList.add('error-input');
-  error.classList.remove('hide');
+function toggleValidationClasses(input) {
+  input.classList.toggle('error-input');
+  error.classList.toggle('hide');
 }
 
-function setSuccess(element) {
+function setError(element, message) {
+  error.innerText = message;
+  toggleValidationClasses(element);
+}
+
+function setSuccess() {
   senderMessage.classList.add('sent');
-  element.classList.remove('error-input');
-  error.classList.add('hide');
   submitButton.value = 'Sent';
   submitButton.classList.add('success');
+  submitButton.disabled = true;
 }
 
 function validateEmail() {
-  const emailValue = email.value.trim();
-  if (!emailRegex.test(emailValue)) {
+  if (email.value !== email.value.toLowerCase()) {
     setError(email, 'Invalid email address');
   } else {
     setSuccess(email);
@@ -250,4 +251,13 @@ function validateEmail() {
 
 form.addEventListener('submit', () => {
   validateEmail();
+});
+
+form.addEventListener('click', (event) => {
+  if (event.target.className === 'error-input') {
+    toggleValidationClasses(event.target);
+    submitButton.classList.remove('success');
+    senderMessage.classList.remove('sent');
+    submitButton.value = 'Get in touch';
+  }
 });
