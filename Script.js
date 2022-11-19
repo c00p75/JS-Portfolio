@@ -216,3 +216,49 @@ workSection.addEventListener('click', (event) => {
     popupWindow(getProjectId);
   }
 });
+
+//  Form Validation
+const form = document.querySelector('#contact_section form');
+const email = form.querySelector('#email');
+const error = form.querySelector('.error');
+const submitButton = form.querySelector('#form_submit');
+const senderMessage = form.querySelector('#msg');
+
+function toggleValidationClasses(input) {
+  input.classList.toggle('error-input');
+  error.classList.toggle('hide');
+}
+
+function setError(element, message) {
+  error.innerText = message;
+  toggleValidationClasses(element);
+}
+
+function setSuccess() {
+  senderMessage.classList.add('sent');
+  submitButton.value = 'Sent';
+  submitButton.classList.add('success');
+  submitButton.disabled = true;
+}
+
+function validateEmail() {
+  if (email.value !== email.value.toLowerCase()) {
+    setError(email, 'Invalid email address');
+  } else {
+    setSuccess(email);
+  }
+}
+
+form.addEventListener('submit', (event) => {
+  validateEmail();
+  if (submitButton.value !== 'Sent') { event.preventDefault(); }
+});
+
+form.addEventListener('click', (event) => {
+  if (event.target.className === 'error-input') {
+    toggleValidationClasses(event.target);
+    submitButton.classList.remove('success');
+    senderMessage.classList.remove('sent');
+    submitButton.value = 'Get in touch';
+  }
+});
