@@ -249,8 +249,9 @@ function validateEmail() {
   }
 }
 
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (event) => {
   validateEmail();
+  if (submitButton.value !== 'Sent') { event.preventDefault(); }
 });
 
 form.addEventListener('click', (event) => {
