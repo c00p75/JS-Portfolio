@@ -262,13 +262,12 @@ function userData() {
   data.name = userName.value;
   data.email = email.value;
   const storeData = JSON.stringify(data);
-  console.log(storeData);
   localStorage.setItem('user data', storeData);
 }
 
 if (localStorage.getItem('user data') !== null) {
-userName.value = JSON.parse(localStorage.getItem('user data')).name;
-email.value = JSON.parse(localStorage.getItem('user data')).email;
+  userName.value = JSON.parse(localStorage.getItem('user data')).name;
+  email.value = JSON.parse(localStorage.getItem('user data')).email;
 }
 // Form event listener
 
@@ -280,7 +279,7 @@ form.addEventListener('click', (event) => {
     submitButton.value = 'Get in touch';
   }
   event.preventDefault();
-  if(event.target.id === 'form_submit') {
+  if (event.target.id === 'form_submit') {
     userData();
   }
 });
