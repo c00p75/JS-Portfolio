@@ -73,7 +73,6 @@ li {
 
 .active-menu-btn {
   position: fixed;
-  width: 12px;
   height: 12px;
   right: 38px;
 }
@@ -112,7 +111,6 @@ li {
 .active .bar1 {
   transform: rotate(45deg) translate(3.5px, 7.7px);
   background-color: white;
-  height: 2px;
 }
 
 .active .bar2 {
@@ -120,9 +118,8 @@ li {
 }
 
 .active .bar3 {
-  transform: rotate(-45deg) translate(1px, -5px);
+  transform: rotate(-45deg) translate(2px, -7px);
   background-color: white;
-  height: 2px;
 }
 
 .btn {
