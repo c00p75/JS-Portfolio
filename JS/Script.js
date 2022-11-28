@@ -254,11 +254,33 @@ form.addEventListener('submit', (event) => {
   if (submitButton.value !== 'Sent') { event.preventDefault(); }
 });
 
+//  Store user data
+const userName = form.querySelector('#name');
+
+function userData() {
+  const data = {};
+  data.name = userName.value;
+  data.email = email.value;
+  const storeData = JSON.stringify(data);
+  console.log(storeData);
+  localStorage.setItem('user data', storeData);
+}
+
+if (localStorage.getItem('user data') !== null) {
+userName.value = JSON.parse(localStorage.getItem('user data')).name;
+email.value = JSON.parse(localStorage.getItem('user data')).email;
+}
+// Form event listener
+
 form.addEventListener('click', (event) => {
   if (event.target.className === 'error-input') {
     toggleValidationClasses(event.target);
     submitButton.classList.remove('success');
     senderMessage.classList.remove('sent');
     submitButton.value = 'Get in touch';
+  }
+  event.preventDefault();
+  if(event.target.id === 'form_submit') {
+    userData();
   }
 });
