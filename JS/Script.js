@@ -278,7 +278,7 @@ form.addEventListener('click', (event) => {
     senderMessage.classList.remove('sent');
     submitButton.value = 'Get in touch';
   }
-  event.preventDefault();
+
   if (event.target.id === 'form_submit') {
     userData();
   }
