@@ -716,7 +716,7 @@ form > * {
 
 .popupLinks .project_link img {
   width: 15%;
-  height: 25%;
+  height: fit-content !important;
 }
 
 .popup .portifolio_img {
@@ -1094,7 +1094,7 @@ form > * {
   }
 
   .btn_effect:hover {
-    background: #6070ff;
+    background: #3b4179;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
     color: white;

@@ -1,3 +1,5 @@
+import workProperties from './Projects.js';
+
 //  Add click event listener to menu btn to toggle menu
 const expandedNav = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('#desktop_nav');
@@ -21,61 +23,6 @@ navLinks.addEventListener('click', (event) => {
     mobileMenuClasses();
   }
 });
-
-//  Variable to store project objects and properties
-const workProperties = {
-  project1: {
-    featuredImage: 'images/Snapshoot Portfolio.png',
-    name: 'Tonic',
-    client: 'CANOPY',
-    role: 'Back End Dev',
-    year: '2015',
-    summary: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-    technologies: ['html', 'css', 'javascript'],
-    liveVersionLink: 'Link to live',
-    sourceLink: 'link to source',
-  },
-
-  project2: {
-    featuredImage: 'images/Snapshoot Portfolio (1).png',
-    name: 'Multi-Post Stories',
-    client: 'CANOPY',
-    role: 'Back End Dev',
-    year: '2015',
-    summary: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-    technologies: ['html', 'css', 'javascript'],
-    liveVersionLink: 'Link to live',
-    sourceLink: 'link to source',
-  },
-
-  project3: {
-    featuredImage: 'images/Snapshoot Portfolio (2).png',
-    name: 'Tonic',
-    client: 'CANOPY',
-    role: 'Back End Dev',
-    year: '2015',
-    summary: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-    technologies: ['html', 'css', 'javascript'],
-    liveVersionLink: 'Link to live',
-    sourceLink: 'link to source',
-  },
-
-  project4: {
-    featuredImage: 'images/Snapshoot Portfolio (3).png',
-    name: 'Multi-Post Stories',
-    client: 'CANOPY',
-    role: 'Back End Dev',
-    year: '2015',
-    summary: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-    technologies: ['html', 'css', 'javascript'],
-    liveVersionLink: 'Link to live',
-    sourceLink: 'link to source',
-  },
-};
 
 //  Function to addlist of technologies to portifolio project
 function addTechnologies(card) {
@@ -101,7 +48,7 @@ function addProject(project) {
   <div class="work_details">
     <div class="project">
       <h2 class="work_item_header">${workProperties[project].name}</h2>
-      <div class="work_history">
+      <div class="work_history" style='display:${workProperties[project].workHistoryDisplay}'>
         <p class="client">
           <span class="client_name">${workProperties[project].client}</span>
         </p>
@@ -167,7 +114,7 @@ function popupWindow(id) {
     <div class="project">
       <h2 class="work_item_header">${workProperties[id].name}</h2>
       <button class='popupClose'>&times</button>
-      <div class="work_history">
+      <div class="work_history" style='display:${workProperties[id].workHistoryDisplay}'>
         <p class="client">
           <span class="client_name">${workProperties[id].client}</span>
         </p>
@@ -191,18 +138,14 @@ function popupWindow(id) {
     </ul>
     <img src="images/Separator Bottom.png" class='popupSeperator' alt="">
     <div class="popupLinks">
-      <div class="project_link btn_effect">
-        <p>
-          <a href="#">See Live</a>
-          <img src="images/External link icon.png" alt="">
-        </p>
-      </div>
-      <div class="project_link btn_effect">
-        <p>
-          <a href="#">See Source</a>
+      <a href=${workProperties[id].liveVersionLink} target="_blank" class="project_link btn_effect">        
+        <span>See Live</span>
+        <img src="images/External link icon.png" alt="">
+      </a>
+      <a href=${workProperties[id].sourceLink} target="_blank" class="project_link btn_effect">
+          <span> See Source<span>
           <img src="images/Github popup icon.png" alt="">
-        </p>
-      </div>
+      </a>
     </div>
   </div>
   `;
