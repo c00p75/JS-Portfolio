@@ -9,7 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <body>   
-	<main class="container">
+	<main class="container flex-col">
 		<header class="header">
 			<nav class="navigation">  
 				<div class="logo"> 
@@ -20,7 +20,7 @@
 					<div class="bar2"></div>
 					<div class="bar3"></div>					
 				</button> 
-				<ul class="hide" id="desktop_nav">
+				<ul class="hide" id="desktop_nav" class="flex-col">
 					<li><a href="#Works" class="hover_effect">Portifolio</a></li>
 					<li><a href="#about_myself" class="hover_effect">About</a></li>
 					<li><a href="#contact_section" class="hover_effect">Contact</a></li>
@@ -28,10 +28,10 @@
 			</nav>
 		</header>
 
-			<section id="intro" >
+			<section id="intro" class="flex-col">
 				<h1 class="intro_greeting">I'm George<br> Nice to see you!</h1>
 				<p class="intro_text">I’m a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
-				<div class="connect">
+				<div class="connect flex-col">
 					<div class="connect_text">
 						<p>LET'S CONNECT<p>    
 					</div>
@@ -58,8 +58,8 @@
 			<section id="Works"></section>
 
 			<section id="about_myself">
-				<div class="about_me_container">
-					<div class="about_me">
+				<div class="about_me_container flex-col">
+					<div class="about_me flex-col">
 						<h2 class="about_me_header">About<br>Myself</h2>
 						<p>Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
 						<div class="connect">
@@ -88,15 +88,15 @@
 								<a href="#" id="resume">Get my resume</a>						
 						</div>		
 					</div>					
-					<ul class="skills">
-						<li class="skill_set1">
+					<ul class="skills flex-col" style="align-items: center;">
+						<li class="skill_set1 flex-col">
 							<div class="language_header">
 								<h3>Languages</h3>
 								<button class="btn2">
 									<img src="images/dropdown.png" alt="">
 								</button>
 							</div>
-							<ul class="language_list_container">
+							<ul class="language_list_container flex-col">
 								<li class="language">
 									<div class="lan">
 										<img src="images/js.png" alt="javascript">			
@@ -127,7 +127,7 @@
 							</div>
 						</li>
 						
-						<img src="images/Separator Bottom.png" alt="" class="sep">
+						<img src="images/Separator Bottom.png" alt="" style="width: 100%;">
 						
 						<li>
 							<div class="language_header language_header_minimized">
@@ -138,14 +138,14 @@
 							</div>							
 						</l1>
 						
-						<img src="images/Separator Bottom.png" alt="" class="sep">
+						<img src="images/Separator Bottom.png" alt="" style="width: 100%;">
 					
 					</ul>
 				</div>
 			</section>
 			
 			<section id="contact_section">
-				<div class="contact_section_container">
+				<div class="contact_section_container flex-col">
 					<h2>Contact me</h2>		
 					<div class="contact_text">
 						<p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
